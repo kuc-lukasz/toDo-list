@@ -23,12 +23,12 @@ function addTask () {
     newLi.appendChild(inputElement)
 
     const newLabel = document.createElement('label')
-    newLabel.setAttribute('for', )
+    newLabel.setAttribute('for',"task-1" )
     newLabel.innerText = newTask
     newLi.appendChild(newLabel)
     
     trash.setAttribute("id","trash")
-
+    trash.setAttribute("class","trash")
     newLi.appendChild(trash)
 
 
@@ -38,7 +38,10 @@ function addTask () {
 
 addBtn.addEventListener('click', addTask)
 
-allTask.forEach((task)=>{
+
+
+
+    allTask.forEach((task)=>{
     const trash = task.lastChild
 
     function removeTasks (){
